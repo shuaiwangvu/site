@@ -1,0 +1,38 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Global stylesheets #}
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}"> -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/butt.css' %}">
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/button.css' %}"> -->
+
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+        {# Global javascript #}
+		<!-- <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script> -->
+        <!-- <script type="text/javascript" src="{% static 'js/style.js' %}"></script> -->
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+			<!-- <script type="text/javascript" src="{% static 'js/demo.js' %}"></script> -->
+		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.js' %}"></script> -->
+		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.min.js' %}"></script> -->
+		<!-- <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script> -->
+		{% block content %}{% endblock %}
+
+        {% endblock %}
+    </body>
+</html>
