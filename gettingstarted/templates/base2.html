@@ -1,0 +1,123 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Shuai Wang</title>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <meta content="Bodo - Simple One Page Personal" name="description">
+	    <meta content="BdgPixel" name="author">
+
+
+
+        {# Global stylesheets #}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+
+        {% block extra_css %}
+
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+
+		<div class="header">
+		  <div class="for-sticky">
+			<!--LOGO-->
+			<div class="col-md-2 col-xs-6 logo">
+			  <a href="/research"><img alt="Shuai-logo" class="logo-nav" src="{% static 'assets/images/logo.png' %}"></a>
+			</div>
+			<!--/.LOGO END-->
+		  </div>
+
+		  <div class="menu-wrap">
+			<nav class="menu">
+			  <div class="menu-list">
+				<a  data-scroll="" href="/research" >
+				  <span>Home</span>
+				</a>
+				<a data-scroll="" href="#about">
+				  <span>About</span>
+				</a>
+				<a data-scroll="" href="#work">
+				  <span>Work</span>
+				</a>
+				 <a data-scroll="" href="#services">
+				  <span>Services</span>
+				</a>
+				<a data-scroll="" href="#employement">
+				  <span>Employement</span>
+				</a>
+				<a data-scroll="" href="#skill">
+				  <span>Skills</span>
+				</a>
+				<a data-scroll="" href="#education">
+				  <span>Education</span>
+				</a>
+				<a data-scroll="" href="#testimonial">
+				  <span>Testimonial</span>
+				</a>
+				<a data-scroll="" href="#blog">
+				  <span>Blog</span>
+				</a>
+				<a href="/research/resume">
+				  <span> CV+Contact </span>
+				</a>
+			  </div>
+			</nav>
+			<button class="close-button" id="close-button">Close Menu</button>
+		  </div>
+
+
+		  <button class="menu-button" id="open-button">
+			<span></span>
+			<span></span>
+			<span></span>
+		  </button><!--/.for-sticky-->
+		</div>
+
+        {% wagtailuserbar %}
+
+        {# Global javascript #}
+		<!-- <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script> -->
+        <!-- <script type="text/javascript" src="{% static 'js/style.js' %}"></script> -->
+
+        {% block extra_js %}
+
+		<script type="text/javascript" src="{% static 'assets/js/jquery-1.9.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.appear.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/classie.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/masonry.pkgd.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/masonry.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/smooth-scroll.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/typed.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+            {# Override this in templates to add extra javascript #}
+		{% block content %}{% endblock %}
+
+        {% endblock %}
+
+
+
+
+    </body>
+
+</html>

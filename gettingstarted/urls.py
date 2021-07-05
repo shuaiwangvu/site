@@ -1,5 +1,5 @@
 from django.urls import path, include
-
+from django.conf import settings
 from django.contrib import admin
 
 admin.autodiscover()
@@ -16,6 +16,7 @@ import hello.views
 
 urlpatterns = [
     path("", hello.views.index, name="index"),
+	path('research/', include('research.urls')),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
 ]
