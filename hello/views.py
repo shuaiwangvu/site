@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
+import requests
+import os
 
 
 # Create your views here.
 def index(request):
-    # return HttpResponse('Hello from Python!')
-    # return render(request, "index.html")
-	return HttpResponse("This is your home page.")
+
+    template = loader.get_template('hello/home_page.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
 
 def db(request):
 	return HttpResponse("This is your db.")
