@@ -1,0 +1,236 @@
+
+{% load static %}
+<!-- Content -->
+<div class="cd-hero">
+
+	<ul class="cd-hero-slider">
+
+		<!-- Page 1 Gallery One -->
+		<li class="selected">
+
+
+			<svg viewbox="0 0 100 20">
+			  <defs>
+			    <linearGradient id="gradient">
+			      <stop color="#000"/>
+			    </linearGradient>
+			    <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+			      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)">
+			        <animateTransform
+			            attributeName="transform"
+			            begin="0s"
+			            dur="1.5s"
+			            type="translate"
+			            from="0,0"
+			            to="40,0"
+			            repeatCount="indefinite" />
+			      </path>
+			    </pattern>
+			  </defs>
+			  <text text-anchor="middle" x="20" y="10" font-size="10" fill="white" fill-opacity="0.1">Gallery</text>
+			  <text text-anchor="middle" x="20" y="10" font-size="10" fill="url(#wave)"  fill-opacity="1">Gallery</text>
+			</svg>
+
+
+			<div class="cd-full-width">
+				<div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
+					<div class="tm-img-gallery-container">
+						<div class="tm-img-gallery gallery-one">
+						<!-- Gallery One pop up connected with JS code below -->
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-01-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>One</strong></span></h2> -->
+										<p class="tm-figure-description">Set true or false in HTML script tag for this page black and white.</p>
+										<a href="{% static 'assets4/img/tm-img-01.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-02-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Two</strong></span></h2> -->
+										<p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
+										<a href="{% static 'assets4/img/tm-img-02.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-03-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Three</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-03.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-04-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Four</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-04.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-05-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Five</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-05.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-06-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Six</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-06.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-07-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Seven</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-07.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-08-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Eight</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-08.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-09-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Nine</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-09.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-10-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Ten</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-10.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-11-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Eleven</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-11.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-12-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Twelve</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-12.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-13-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Thirteen</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-13.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-14-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Fourteen</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-14.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-15-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Fifteen</strong></span></h2> -->
+										<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<a href="{% static 'assets4/img/tm-img-15.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="grid-item">
+								<figure class="effect-sadie">
+									<img src="{% static 'assets4/img/tm-img-16-tn.jpg' %}" alt="Image" class="img-fluid tm-img">
+									<figcaption>
+										<!-- <h2 class="tm-figure-title">Image <span><strong>Sixteen</strong></span></h2> -->
+										<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
+										<a href="{% static 'assets4/img/tm-img-16.jpg' %}">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+
+
+</ul> <!-- .cd-hero-slider -->
+
+	<footer class="tm-footer">
+
+		<!-- <div class="tm-social-icons-container text-xs-center">
+			<a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
+			<a href="#" class="tm-social-link"><i class="fa fa-google-plus"></i></a>
+			<a href="#" class="tm-social-link"><i class="fa fa-twitter"></i></a>
+			<a href="#" class="tm-social-link"><i class="fa fa-behance"></i></a>
+			<a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+	  </div> -->
+
+		<!-- <p class="tm-copyright-text">Copyright &copy; <span class="tm-copyright-year">current year</span> Your Company
+
+		 | Design: TemplateMo</p> -->
+
+	</footer>
+
+</div> <!-- .cd-hero -->
+
+
+<!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+<div id="loader-wrapper">
+
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+
+</div>
