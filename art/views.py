@@ -16,11 +16,11 @@ def hands(request):
     return HttpResponse(template.render(context, request))
 
 def golden(request):
-    # return HttpResponse("This is your golden.")
 	template = loader.get_template('art/golden.html')
 	context = {}
 	return HttpResponse(template.render(context, request))
 
-
 def gallery(request):
-    return HttpResponse("This is your gallery.")
+	template = loader.get_template('art/gallery.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
