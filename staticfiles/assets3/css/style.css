@@ -193,8 +193,9 @@ h6 {
     margin-bottom: .9rem;
 }*/
 p {
-    line-height: 2rem;
-    font-size: 0.875rem;
+    line-height: 2.5rem;
+    /* font-size: 0.975rem; */
+	font-size: 1.125rem;
 }
 p:last-child {
     margin-bottom: 0px;

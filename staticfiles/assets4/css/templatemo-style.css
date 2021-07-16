@@ -12,6 +12,7 @@ html.gray #loader-wrapper {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
+overflow-y: scroll; overflow-x:hidden;
 }
 
 body {
@@ -20,10 +21,10 @@ body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 300;
-	overflow-x: hidden;
+	overflow-y: scroll; overflow-x:hidden;
 }
 
-ul { padding: 0; margin: 0; }
+ul { padding: 0; margin: 0; overflow-y: scroll; }
 figure { margin: 0; }
 p:last-child { margin-bottom: 0; }
 a { color: #3f97c9; }
@@ -48,7 +49,7 @@ a:focus {
 	padding-right: 0;
 }
 
-.cd-hero-slider .cd-full-width { padding-top: 0; }
+.cd-hero-slider .cd-full-width { padding-top: 0; overflow-y: scroll; }
 
 .cd-slider-nav {
 	position: absolute;
