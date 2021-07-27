@@ -925,11 +925,12 @@ ul.portfolio-image li .desc{
 .bg-about {
   /* background: url('../images/reza.jpg'); */
   background-image: url("/static/research/images/reza.jpg");
+background-size: 430px;
 	/* background-size: 300px 150px; */
-  -webkit-background-size: 100px;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: auto;
+  /* -webkit-background-size: 100px; */
+  /* -moz-background-size: cover; */
+  /* -o-background-size: cover; */
+  /* background-size: auto; */
   background-repeat: no-repeat;
   background-position: center right;
   padding: 0;
