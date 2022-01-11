@@ -25,7 +25,10 @@ def publication(request):
 
 
 def tools(request):
-    return HttpResponse("This is the source code of your tools and platforms.")
+    # return HttpResponse("This is the source code of your tools and platforms.")
+	template = loader.get_template('research/tools.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
 
 def data(request):
     template = loader.get_template('research/data.html')
@@ -34,7 +37,10 @@ def data(request):
 
 
 def teaching(request):
-    return HttpResponse("This is your teaching.")
+    # return HttpResponse("This is your teaching.")
+	template = loader.get_template('research/teaching.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
 
 def activities(request):
     return HttpResponse("This is your activities.")
