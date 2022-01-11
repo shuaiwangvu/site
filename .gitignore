@@ -1,2 +1,8 @@
 hello/__pycache__/
+hello/__pycache__/*
 research/__pycache__/
+research/__pycache__/*
+hello/migrations/__pycache__/
+hello/migrations/__pycache__/*
+research/static/files/.DS_Store
+staticfiles/.DS_Store
