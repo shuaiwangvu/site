@@ -11,12 +11,14 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def blog(request):
-    return HttpResponse("This is your blog.")
-
-def resume(request):
-    template = loader.get_template('research/resume.html')
+    template = loader.get_template('research/blog.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+# def resume(request):
+#     template = loader.get_template('research/resume.html')
+#     context = {}
+#     return HttpResponse(template.render(context, request))
 
 def publication(request):
     template = loader.get_template('research/publication.html')
@@ -43,4 +45,4 @@ def teaching(request):
 	return HttpResponse(template.render(context, request))
 
 def activities(request):
-    return HttpResponse("This is your activities.")
+    return HttpResponse("This webpage is under construction.")
