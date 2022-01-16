@@ -13,3 +13,5 @@ staticfiles/.DS_Store
 art/.DS_Store
 art/__pycache__/
 art/migrations/
+art/static/.DS_Store
+art/static/assets3/.DS_Store
