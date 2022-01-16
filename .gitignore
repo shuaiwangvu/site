@@ -7,6 +7,9 @@ hello/migrations/__pycache__/*
 research/static/files/.DS_Store
 research/__pycache__
 research/__pycache__/*
+research/migrations/
 staticfiles/.DS_Store
 .DS_Store
 art/.DS_Store
+art/__pycache__/
+art/migrations/
