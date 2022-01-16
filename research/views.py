@@ -45,4 +45,6 @@ def teaching(request):
 	return HttpResponse(template.render(context, request))
 
 def activities(request):
-    return HttpResponse("This webpage is under construction.")
+	template = loader.get_template('research/activities.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
