@@ -10,8 +10,8 @@ def index(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
-def blog(request):
-    template = loader.get_template('research/blog.html')
+def supervision(request):
+    template = loader.get_template('research/supervision.html')
     context = {}
     return HttpResponse(template.render(context, request))
 
