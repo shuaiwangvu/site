@@ -24,3 +24,8 @@ def gallery(request):
 	template = loader.get_template('art/gallery.html')
 	context = {}
 	return HttpResponse(template.render(context, request))
+
+def film(request):
+	template = loader.get_template('art/film.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
