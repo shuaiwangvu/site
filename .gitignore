@@ -10,6 +10,8 @@ research/__pycache__/*
 research/migrations/
 staticfiles/.DS_Store
 .DS_Store
+**/.DS_Store
+**/*.pyc
 art/.DS_Store
 art/__pycache__/
 art/migrations/
