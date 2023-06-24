@@ -1,0 +1,35 @@
+{% extends "base-seeing.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/button.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/butt.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'assets2/css/main.css' %}"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/iconfont.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/jquery.fancybox.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/magnific-popup.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/plugins.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets5/css/responsive.css' %}">
+
+
+{% endblock extra_css %}
+
+{% block content %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+{% include 'art/seeing_content.html' %}
+
+{% endblock content %}

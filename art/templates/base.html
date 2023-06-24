@@ -23,16 +23,16 @@
         {% wagtailuserbar %}
 
         {# Global javascript #}
-		<!-- <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script> -->
+    		<!-- <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script> -->
         <!-- <script type="text/javascript" src="{% static 'js/style.js' %}"></script> -->
 
         {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-			<!-- <script type="text/javascript" src="{% static 'js/demo.js' %}"></script> -->
-		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.js' %}"></script> -->
-		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.min.js' %}"></script> -->
-		<!-- <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script> -->
-		{% block content %}{% endblock %}
+        {# Override this in templates to add extra javascript #}
+    		<!-- <script type="text/javascript" src="{% static 'js/demo.js' %}"></script> -->
+    		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.js' %}"></script> -->
+    		<!-- <script type="text/javascript" src="{% static 'js/jquery.particleground.min.js' %}"></script> -->
+    		<!-- <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script> -->
+    		{% block content %}{% endblock %}
 
         {% endblock %}
     </body>

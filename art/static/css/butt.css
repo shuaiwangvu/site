@@ -15,7 +15,7 @@ body {
 }
 
 div[class*=box] {
-  height: 25%;
+  height: 20%;
   width: 100%;
   display: flex;
   justify-content: center;
