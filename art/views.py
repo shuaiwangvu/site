@@ -29,3 +29,8 @@ def film(request):
 	template = loader.get_template('art/film.html')
 	context = {}
 	return HttpResponse(template.render(context, request))
+
+def seeing(request):
+	template = loader.get_template('art/seeing.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
