@@ -18,6 +18,6 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
 	path('research/', include('research.urls')),
 	path('art/', include('art.urls')),
-    path("db/", hello.views.db, name="db"),
-    path("admin/", admin.site.urls),
+    # path("db/", hello.views.db, name="db"),
+    # path("admin/", admin.site.urls),
 ]
