@@ -1,5 +1,5 @@
 
-{% extends "base2.html" %}
+{% extends "base3.html" %}
 {% load static %}
 
 
@@ -25,631 +25,47 @@
 				<span>Publication</span>
 			  </h3>
 			  <p class="content-detail">
-				This page is outdated. I will need to reorganise these papers according to projects and add bibtex files. For the latest work, please see my <a href="https://scholar.google.nl/citations?user=chqjd5QAAAAJ&hl=en"><u>Google Scholar</u></a> page
+				 This page contains recent publications and working papers only. For the full list, please see my <a href="https://scholar.google.nl/citations?user=chqjd5QAAAAJ&hl=en"><u>Google Scholar</u></a> page
 				<!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. -->
+        If you are looking for a dataset, please go to the <a href="../data"><u>dataset</u></a> page.
 			  </p>
 			</div>
 			<div class="col-md-9 content-right">
 			  <div class="row">
 				<ul class="listing-item">
 
-					<li>
-					  <div class="col-md-6 col-sm-6">
-						<div class="wrap-card">
-						  <div class="card">
-							<h2 class="year">
-							  On the Analysis of Large Integrated Knowledge Graphs for Economics, Banking, and Finance
-							</h2>
-							<p class="job">
-							  EcoFin workshop
-							</p>
 
-							<p class="company">
-							  Knowledge Graph Refinement
-							</p>
-							  <p class="company">
-								Integrated knowledge graphs
-							</p>
-							<hr>
-							<div class="text-detail">
-							  <p> Knowledge graphs are being used for the detection of money laundering, insurance fraud, and other suspicious activities. Some recent work demonstrated how knowledge graphs are being used to study the impact of the COVID-19 outbreak on the economy. The fact that knowledge graphs are being used in more and more interdisciplinary problems calls for a reliable source of interdisciplinary knowledge. In this paper, we study the integration of knowledge graphs in the domains of economics, banking, and finance. Our integrated knowledge graph has 527k entities and 1.5 million triples. By performing statistical and graph-theoretical analysis, we demonstrate how the integration results in more entities with richer information. Its quality was examined by analyzing the subgraphs of the identity links and (pseudo-)transitive relations. Finally, we study the sources of error, and their refinement and discuss how the use of our integrated graph may lead to greater sophistication and better accuracy.
-							  </p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</li>
+    <h2>Search Recent Publication [this page is still to be udpated]</h2>
 
-					<li>
-					  <div class="col-md-6 col-sm-6">
-						<div class="wrap-card">
-						  <div class="card">
-							<h2 class="year">
-							Refining Large Identity Graphs using the Unique Name Assumption
-							</h2>
-							<p class="job">
-							ESWC 2023
-							</p>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for titles.." title="Type in a name">
 
-							<p class="company">
-							Knowledge Graph Refinement
-							</p>
-							  <p class="company">
-							Unique Name Assumption
-							</p>
-							<hr>
-							<div class="text-detail">
-							  <p> The Unique Name Assumption (UNA) supposes that two terms with distinct IRIs from the same dataset do not refer to the same real-world entity. The UNA has been used to refine identity graphs: if the UNA is true, then identity links (e.g. those with relation owl:sameas) between two entities defined by the same dataset can be considered erroneous. While this works on a small scale, it has not been validated on the scale of large integrated knowledge graphs, such as the LOD cloud, which contain data from many different sources. We propose a concrete definition of the UNA with tolerance towards exceptions, namely the internal UNA (iUNA). We compare our definition with existing definitions with respect to some real-world datasets. Based on the iUNA, we propose an algorithm to identify erroneous links in an identity graph of half a billion triples extracted from the LOD Cloud. The algorithm employs an SMT solver and takes advantage of the latter's ability to efficiently reason over equality and remove a minor amount of links. Finally, we demonstrate how additional information can improve the accuracy.
-							  </p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</li>
+    <table id="myTable">
+      <tr class="header">
+        <th style="width:50%;">Title</th>
+        <th style="width:10%;">Conference /Journal</th>
+        <th style="width:10%;">Slides /Poster</th>
+        <th style="width:15%;">Data</th>
+        <th style="width:8%;">Code</th>
+        <th style="width:7%;">Cite</th>
+      </tr>
+      <tr>
+        <td><a href="{% static 'files/paper/CAiSE.pdf' %}"><u>Aligning Data Management Plans with Community Standards using FAIR Implementation Profiles</u></a></td>
+        <td>Under submission</td>
+        <td>to come</td>
+        <td><a href="https://doi.org/10.5281/zenodo.10286752"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10286752.svg" alt="DOI"></a></td>
+        <td><a href="https://github.com/FAIR-Expertise-Hub/FIP2DMP"><u>Github</u></a></td>
+        <td><a href=""><u>.bib</u></a></td>
+      </tr>
+      <tr>
+        <td><a href="{% static 'files/paper/RBC.pdf' %}"><u>Knowledge Modelling, Strategy Designing, and Agent Engineering for Reconnaissance Blind Chess</u></a></td>
+        <td><a href="https://icaart.scitevents.org/">ICAART'24</a></td>
+        <td>to come</td>
+        <td>-</td>
+        <td><a href="https://github.com/todo"><u>Github</u></a></td>
+        <td><a href=""><u>.bib</u></a></td>
+      </tr>
 
-
-
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							Refining Transitive and Pseudo-Transitive Relations at Web Scale
-						  </h2>
-						  <p class="job">
-							European Semantic Web Conference (ESWC), online, 2021
-						  </p>
-
-						  <p class="company">
-						    Knowledge Graph Refinement
-						  </p>
-							<p class="company">
-						    Web-scale Algorithm
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p> Existing refinement methods for knowledge graphs are often domain-specific, are limited to single relations (e.g. owl:sameAs), or are limited in scale. We present a challenge consisting of a number of datasets of transitive and pseudo-transitive relations and hand-labeled gold standards, as well as baselines. We introduce an efficient web-scale knowledge graph refinement algorithm that works for such relations.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							SUBMASSIVE: Resolving Subclass Cycles in Very Large Knowledge Graphs
-						  </h2>
-						  <p class="job">
-							Workshop on Large Scale RDF Analytics (LASCAR), online, 2020
-						  </p>
-						  <p class="company">
-							Cycle Resolving
-						  </p>
-						  <p class="company">
-						    Knowledge Graphs
-						  </p>
-						  <p class="company">
-						   Automated Reasoning
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>
-								In this paper, we present an automatic approach for resolving such cycles at scale using automated reasoning by encoding the problem of cycle-resolving to a MAXSAT solver. The approach is tested on the LOD-a-lot dataset, and compared against a semi-automatic version of our algorithm.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				</ul>
-
-				<ul class="listing-item">
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							A Multimodal Chatbot System for Enhancing Social Skills Training for Security Guards
-						  </h2>
-						  <p class="job">
-							International Conference on Human-Computer Interaction, Orlando, Florida, USA, 2019
-						  </p>
-						  <p class="company">
-							Chatbots
-						  </p>
-						  <p class="company">
-						    Human Computer Interaction
-						  </p>
-						  <p class="company">
-						    Serious Games
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>Chatbots are typically used in dialogue systems for various purposes such as customer service and information acquisition. This paper explores enhancement of social skills training for security guards with the use of chatbots. More specifically, we designed a chatbot using text and voice as input to study the acceptance and the impact of the system to training security guards in deal with stress situations. The result of a pilot experiment and a survey are presented and discussed.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							Evolving Efficient Deep Neural Networks for Real-time Object Recognition
-						  </h2>
-						  <p class="job">
-							IEEE Symposium Series on Computational Intelligence (SSCI), Xiamen, China, 2019
-						  </p>
-						  <p class="company">
-							Neural Networks
-						  </p>
-						  <p class="company">
-						    Object Recognition
-						  </p>
-						  <p class="company">
-						    Machine Learning
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>Accelerating DNNs by reducing the parameters of DNNs is crucial for real-time object recognition. This paper presents an evolutionary approach to evolve efficient DNNs that can be run on Low-Performance Computing Hardware (LPCH) for real-time object recognition with the fastest possible speed and an accuracy of more than 95%. This approach achieves the goal by means of two design choices. First, NeuroEvolution of Augmenting Topologies (NEAT) is applied to evolve both weights and topology of DNNs starting from simple initial topology, which reduces the number of parameters of DNNs from millions to thousands. Second, we propose the novel fitness functions to further select the evolved DNNs for lower computation …
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				</ul>
-
-
-				<ul class="listing-item">
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							Robot Ethical Training with Dynamic Ethical Preference Logic
-						  </h2>
-						  <p class="job">
-							International Conference on Climbing and Walking Robots and Support Technologies for Mobile Machines (CLAWAR), London, UK, 2016
-						  </p>
-						  <p class="company">
-							Deontic Logic
-						  </p>
-						  <p class="company">
-							Intelligent Agents
-						  </p>
-						  <p class="company">
-						    Contrary-to-duty (CTD) Obligations
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>We address the need of ethical training of agents/robots by introducing Dynamic Ethical Preference Logic (DEPL) as an extension of Deontic Logic. We introduce ethical training as model updating with respect to some contrary-to-duty (CTD) obligations.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							Towards Dynamic Epistemic Learning of Actions in Autonomic Multi-agent Systems
-						  </h2>
-						  <p class="job">
-							IEEE International Conference on Autonomic Computing (ICAC), Würzburg, Germany, 2016
-						  </p>
-						  <p class="company">
-							Multi-agent Systems
-						  </p>
-						  <p class="company">
-						    Self-learning Agents
-						  </p>
-						  <p class="company">
-						    Multi-agent Simulation
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>This demo paper introduces dynamic epistemic learning of actions to autonomic Multi-agent Systems for self-learning, planning and self-upgrading. This case study implements and tests a simulation in NetLogo to explore the interaction between planning and the increase of agents' knowledge about actions for goal-directed self-improving.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-				</ul>
-
-				<ul class="listing-item">
-				  <li>
-					<div class="col-md-6 col-sm-6">
-					  <div class="wrap-card">
-						<div class="card">
-						  <h2 class="year">
-							Towards Dynamic Epistemic Learning of Actions for Self-Improving Agents and Multi-agent Systems
-						  </h2>
-						  <p class="job">
-							IEEE International Conference on Autonomic Computing (ICAC), Würzburg, Germany, 2016
-						  </p>
-						  <p class="company">
-							Multi-agent System
-						  </p>
-						  <p class="company">
-							Intelligent Agents
-						  </p>
-						  <p class="company">
-							Dynamic Epistemic Logic
-						  </p>
-						  <hr>
-						  <div class="text-detail">
-							<p>Action learning is an important aspect of self-improving. This paper explores a new approach for the learning of two types of actions, namely precondition-free actions and conditional actions. The corresponding two learning algorithms are designed and implemented using modern logic reasoners. Finally, a simple system of action learning agents is implemented to explore cooperative self-improving multi-agent systems.
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </li>
-
-
-				</ul>
-
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </section>
-	  <!--/.EDUCATION END-->
-
-
-
-	  	  <!--Thesis and Internship Reports-->
-	  	  <section class="grey-bg" id="education">
-	  		<div class="container">
-	  		  <div class="row">
-	  			<div class="col-md-3">
-	  			  <h3 class="title-small">
-	  				<span>Thesis and Internship Reports</span>
-	  			  </h3>
-	  			  <p class="content-detail">
-	  				<!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. -->
-	  			  </p>
-	  			</div>
-	  			<div class="col-md-9 content-right">
-	  			  <div class="row">
-	  				<ul class="listing-item">
-	  				  <li>
-	  					<div class="col-md-6 col-sm-6">
-	  					  <div class="wrap-card">
-	  						<div class="card">
-	  						  <h2 class="year">
-	  							Turing Learning with Nash Memory
-	  						  </h2>
-	  						  <p class="job">
-	  							Master thesis, ILLC, University of Amsterdam, Amsterdam, the Netherlands, 2017
-	  						  </p>
-
-	  						  <p class="company">
-	  						    Turing Learning
-	  						  </p>
-	  							<p class="company">
-	  						    Nash Memory
-	  						  </p>
-							  <p class="company">
-							  Multi-agent System
-							  </p>
-							  <p class="company">
-							  Neural Network
-							  </p>
-	  						  <hr>
-	  						  <div class="text-detail">
-	  							<p> Turing Learning is a method for the reverse engineering of agent behaviors. This approach was inspired by the Turing test where a machine can pass if its behaviour is indistinguishable from that of a human. Nash memory is a memory mechanism for coevolution. It guarantees monotonicity in convergence. This thesis explores the integration of such memory mechanism with Turing Learning for faster learning of agent behaviors. We employ the Enki robot simulation platform and learns the aggregation behavior of epuck robots. Our experiments indicate that using Nash memory can reduce the computation time by 35.4% and results in faster convergence for the aggregation game. In addition, we present TuringLearner, the first Turing Learning platform.
-	  							</p>
-	  						  </div>
-	  						</div>
-	  					  </div>
-	  					</div>
-	  				  </li>
-
-	  				  <li>
-	  					<div class="col-md-6 col-sm-6">
-	  					  <div class="wrap-card">
-	  						<div class="card">
-	  						  <h2 class="year">
-	  							Reverse Engineering of HOL Proofs
-	  						  </h2>
-	  						  <p class="job">
-	  							Internship Report, INRIA, Paris, France, 2015
-	  						  </p>
-	  						  <p class="company">
-	  							Proof Engineering
-	  						  </p>
-	  						  <p class="company">
-	  						    Logical Framework
-	  						  </p>
-	  						  <p class="company">
-	  						   Automated Reasoning
-	  						  </p>
-	  						  <hr>
-	  						  <div class="text-detail">
-	  							<p>This internship was to analysis the translation of HOL-proofs to Dedukti in order to build constructive proofs when possible. The goal of this project was to perform some quantitative analysis of the proportion of proofs in usual classical mathematics that do not genuinely use the law of excluded middle and that could be expressed constructively.
-	  							</p>
-	  						  </div>
-	  						</div>
-	  					  </div>
-	  					</div>
-	  				  </li>
-	  				</ul>
-	  				<ul class="listing-item">
-	  				  <li>
-	  					<div class="col-md-6 col-sm-6">
-	  					  <div class="wrap-card">
-	  						<div class="card">
-	  						  <h2 class="year">
-	  							Multi-Agent Multi-Contact Path Planning
-	  						  </h2>
-	  						  <p class="job">
-	  							Internship Report, LAAS-CNRS, Toulouse, France, 2016
-	  						  </p>
-	  						  <p class="company">
-	  							Robotics
-	  						  </p>
-	  						  <p class="company">
-	  						    Planning
-	  						  </p>
-	  						  <p class="company">
-	  						    Multi-agent Systems
-	  						  </p>
-	  						  <hr>
-	  						  <div class="text-detail">
-	  							<p>This internship was about using HPP for the task of multi-agent path planning with multiple contacts. The HPP implementation perform reasoning about planning of a single robot but not multiple robots in parallel. We explored possible changes of HPP for better management of multiple agents. Reuse of intermediate planning results are possible but not implemented. We implemented a naive collision avoidance algorithm, which could be further optimised.
-	  							</p>
-	  						  </div>
-	  						</div>
-	  					  </div>
-	  					</div>
-	  				  </li>
-
-	  				  <li>
-	  					<div class="col-md-6 col-sm-6">
-	  					  <div class="wrap-card">
-	  						<div class="card">
-	  						  <h2 class="year">
-	  							RNA Secondary Structure Prediction with SAT/SMT Solvers
-	  						  </h2>
-	  						  <p class="job">Bachelor Thesis, University of Manchester, Manchester, UK, 2014
-	  						  </p>
-	  						  <p class="company">
-	  							Bioinformatics
-	  						  </p>
-							  <p class="company">
-							    Automated Reasoning
-							  </p>
-	  						  <p class="company">
-	  						    RNA Secondary Structure Prediction
-	  						  </p>
-
-	  						  <hr>
-	  						  <div class="text-detail">
-	  							<p>The project aimed at predicting RNA secondary structure using a new logic based approach taking full advantage of two state-of-the-art reasoners: Z3 and SAT4J. We encoded energy constraints and structural constraints. The solution corresponds to a prediction of the RNA secondary structure.
-	  							</p>
-	  						  </div>
-	  						</div>
-	  					  </div>
-	  					</div>
-	  				  </li>
-	  				</ul>
-
-	  			  </div>
-	  			</div>
-	  		  </div>
-	  		</div>
-	  	  </section>
-	  	  <!--/.EDUCATION END-->
-
-
-
-		  	  	  <!--Other Reports-->
-		  	  	  <section class="grey-bg" id="education">
-		  	  		<div class="container">
-		  	  		  <div class="row">
-		  	  			<div class="col-md-3">
-		  	  			  <h3 class="title-small">
-		  	  				<span>Other Reports and Research Outputs</span>
-		  	  			  </h3>
-		  	  			  <p class="content-detail">
-		  	  				<!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. -->
-		  	  			  </p>
-		  	  			</div>
-		  	  			<div class="col-md-9 content-right">
-		  	  			  <div class="row">
-		  	  				<ul class="listing-item">
-		  	  				  <li>
-		  	  					<div class="col-md-6 col-sm-6">
-		  	  					  <div class="wrap-card">
-		  	  						<div class="card">
-		  	  						  <h2 class="year">
-		  	  							A Quantitative Analysis of Kernel Extension for Higher Order Proof Checking
-		  	  						  </h2>
-		  	  						  <p class="job">
-										  European Summer School in Logic, Language and Information (ESSLLI) student session, Bolzano, Italy, 2016.
-		  	  						  </p>
-
-		  	  						  <p class="company">
-		  	  						    Kernal Extension
-		  	  						  </p>
-		  	  							<p class="company">
-		  	  						    Higher Order Logic
-		  	  						  </p>
-									  <p class="company">
-									  Proof Checking
-									  </p>
-		  	  						  <hr>
-		  	  						  <div class="text-detail">
-		  	  							<p> For the sake of reliability, the kernels of Interactive Theorem Provers (ITPs) are kept relatively small in general. On top of the kernel, additional symbols and inference rules are defined. This paper presents a qualitative analysis how kernel extension reduces the size of proofs and impact proof checking.
-		  	  							</p>
-		  	  						  </div>
-		  	  						</div>
-		  	  					  </div>
-		  	  					</div>
-		  	  				  </li>
-
-		  	  				  <li>
-		  	  					<div class="col-md-6 col-sm-6">
-		  	  					  <div class="wrap-card">
-		  	  						<div class="card">
-		  	  						  <h2 class="year">
-		  	  							ProofCloud: A Proof Retrieval Engine for Verified Proofs in Higher Order Logic
-		  	  						  </h2>
-		  	  						  <p class="job">
-		  	  							International Workshop on User Interfaces for Theorem Provers (UITP), Coimbra, Portugal, 2016
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  							Proof Engineering
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						    Search Engine
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						   Theorem Proving
-		  	  						  </p>
-		  	  						  <hr>
-		  	  						  <div class="text-detail">
-		  	  							<p>
-		  	  								This paper introduces ProofCloud, a proof retrieval engine for verified higher order proofs. ProofCloud provides a fast proof searching service for mathematicians and computer scientists for the reuse of proofs and proof packages. The paper also includes a first statistical analysis of higher order proofs and the first complete proof checking results and benchmarks for higher order proofs of the OpenTheory repository.
-		  	  							</p>
-		  	  						  </div>
-		  	  						</div>
-		  	  					  </div>
-		  	  					</div>
-		  	  				  </li>
-		  	  				</ul>
-		  	  				<ul class="listing-item">
-		  	  				  <li>
-		  	  					<div class="col-md-6 col-sm-6">
-		  	  					  <div class="wrap-card">
-		  	  						<div class="card">
-		  	  						  <h2 class="year">
-		  	  							Multi-agent Multi-contact Path Planning with HPP
-		  	  						  </h2>
-		  	  						  <p class="job">
-		  	  							Benelux Conference on Artificial Intelligence (BNAIC), Amsterdam, the Netherlands, 2016
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  							Multi-agent System
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						    Path Planning
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						    HPP
-		  	  						  </p>
-		  	  						  <hr>
-		  	  						  <div class="text-detail">
-		  	  							<p>This demonstration paper presents the first attempt using HPP, a new path planner, for multi-agent multi-contact path planning tasks. More specifically, this project deals with the case where there are a few HyQ robots on a Boeing 747-400 airplane. Each robot needs to move to the emergency exit as specified. We first generate the trajectory, based on which the contact are specified. Finally we illustrate the locomotion in animation.
-		  	  							</p>
-		  	  						  </div>
-		  	  						</div>
-		  	  					  </div>
-		  	  					</div>
-		  	  				  </li>
-
-		  	  				  <li>
-		  	  					<div class="col-md-6 col-sm-6">
-		  	  					  <div class="wrap-card">
-		  	  						<div class="card">
-		  	  						  <h2 class="year">
-		  	  							Reasoner-Aid Research: Potentials and Popularity
-		  	  						  </h2>
-		  	  						  <p class="job">
-		  	  							Benelux Conference on Artificial Intelligence (BNAIC), Amsterdam, the Netherlands, 2016
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  							Automated Reasoning
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						    Research Automation
-		  	  						  </p>
-		  	  						  <p class="company">
-		  	  						    Education
-		  	  						  </p>
-		  	  						  <hr>
-		  	  						  <div class="text-detail">
-		  	  							<p>This paper survey presents the first study on the popularity of reasoner-aid research among students. To understand how students are accepting and conducting research with the help of reasoners, a survey was conducted among students in two Dutch universities. The analysis shows that the majority has little knowledge about this approach and a small amount of students have experience with reasoner-aid research. This paper summarise the benefit of reasoner-aid research, reasons of its limited popularity and discuss the potentials of this approach.
-		  	  							</p>
-		  	  						  </div>
-		  	  						</div>
-		  	  					  </div>
-		  	  					</div>
-		  	  				  </li>
-		  	  				</ul>
-
-							<ul class="listing-item">
-							  <li>
-								<div class="col-md-6 col-sm-6">
-								  <div class="wrap-card">
-									<div class="card">
-									  <h2 class="year">
-										Proof Engineering of Higher Order Logic: Collaboration, Transformation, Checking and Retrieval
-									  </h2>
-									  <p class="job">
-										Conference on Artificial Intelligence and Theorem Proving (AITP), Obergurgl, Austria, 2016
-									  </p>
-									  <p class="company">
-										Higher Order Logic
-									  </p>
-									  <p class="company">
-										Proof Engineering
-									  </p>
-									  <p class="company">
-										Proof Checking
-									  </p>
-									  <hr>
-									  <div class="text-detail">
-										<p>Higher Order Logic has been used in formal mathematics, software verification and hardware verification over the past decades. Recent developments made sharing proofs between some theorem provers possible. This paper first gives an introduction and an overview of related recent advances, followed by the proof checking benchmarks of a proof sharing repository, namely OpenTheory. Finally, we introduce ProofCloud, the first proof retrieval engine for higher order logic proofs.
-										</p>
-									  </div>
-									</div>
-								  </div>
-								</div>
-							  </li>
-
-
-							</ul>
-
-		  	  			  </div>
-		  	  			</div>
-		  	  		  </div>
-		  	  		</div>
-		  	  	  </section>
-		  	  	  <!--/.EDUCATION END-->
-
-
-	        <!--FOOTER-->
-	        <footer>
-	          <div class="footer-top">
-	            <!-- <ul class="socials">
-	              <li class="facebook">
-	                <a href="#" data-hover="LinkedIn">LinkedIn</a>
-	              </li>
-	              <li class="twitter">
-	                <a href="#" data-hover="Google Scholar">Google Scholar</a>
-	              </li>
-	              <li class="gplus">
-	                <a href="#" data-hover="Github">Github</a>
-	              </li>
-	            </ul> -->
-	          </div>
-
-
-	        </footer>
-	        <!--/.FOOTER-END-->
+    </table>
 
 
   <!--/.CONTENT END-->
@@ -657,6 +73,23 @@
 <!--/.CONTENT-WRAP END-->
 </div>
 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
 {% endblock content %}
