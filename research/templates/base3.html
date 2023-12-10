@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Shuai Wang</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+
+  #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  </style>
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+	    <meta content="width=device-width, initial-scale=1" name="viewport">
+	    <meta content="Shuai Wang" name="description">
+	    <meta content="BdgPixel" name="author">
+
+
+
+        {# Global stylesheets #}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+
+        {% block extra_css %}
+
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+
+
+
+    </head>
+
+
+
+    <body class="{% block body_class %}{% endblock %}">
+
+		<div class="header">
+		  <div class="for-sticky">
+			<!--LOGO-->
+			<!-- <div class="col-md-2 col-xs-6 logo">
+			  <a href="/research"><img alt="Shuai-logo" class="logo-nav" src="{% static 'assets/images/logo.png' %}"></a>
+			</div> -->
+			<!--/.LOGO END-->
+		  </div>
+
+		  <div class="menu-wrap">
+			<nav class="menu">
+			  <div class="menu-list">
+				<a href="/research" >
+				  <span>Home</span>
+				</a>
+				<a href="/research/publication">
+				  <span>Publication</span>
+				</a>
+				<a href="/research/data">
+				  <span>Data</span>
+				</a>
+				 <a  href="/research/tools">
+				  <span>Tools</span>
+				</a>
+				<a  href="/research/teaching">
+				  <span>Teaching</span>
+				</a>
+				<a  href="/research/supervision">
+				  <span>Supervision</span>
+				</a>
+				<a  href="/research/activities">
+				  <span>Activities</span>
+				</a>
+				<!-- <a data-scroll="" href="#testimonial">
+				  <span>Testimonial</span>
+				</a> -->
+				<!-- <a data-scroll="" href="#blog">
+				  <span>Blog</span>
+				</a> -->
+				<!-- <a href="/research/resume">
+				  <span> CV+Contact </span>
+				</a> -->
+			  </div>
+			</nav>
+			<button class="close-button" id="close-button">Close Menu</button>
+		  </div>
+
+
+		  <button class="menu-button" id="open-button">
+			<span></span>
+			<span></span>
+			<span></span>
+		  </button><!--/.for-sticky-->
+		</div>
+
+
+
+        {# Global javascript #}
+		<!-- <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script> -->
+        <!-- <script type="text/javascript" src="{% static 'js/style.js' %}"></script> -->
+
+        {% block extra_js %}
+
+		<script type="text/javascript" src="{% static 'assets/js/jquery-1.9.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.appear.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/classie.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/masonry.pkgd.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/masonry.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/smooth-scroll.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/typed.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+    <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+
+            {# Override this in templates to add extra javascript #}
+		{% block content %}{% endblock %}
+
+        {% endblock %}
+
+
+    </body>
+
+</html>
