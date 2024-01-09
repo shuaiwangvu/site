@@ -1,0 +1,22 @@
+{% extends "base-art.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/button.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/butt.css' %}">
+<link rel="stylesheet" href="{% static 'assets2/css/main.css' %}">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+{% endblock extra_css %}
+
+{% block content %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+{% include 'art/lust_content.html' %}
+
+{% endblock content %}

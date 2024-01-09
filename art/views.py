@@ -30,7 +30,25 @@ def film(request):
 	context = {}
 	return HttpResponse(template.render(context, request))
 
+def film2(request):
+	template = loader.get_template('art/film2.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
+
 def seeing(request):
 	template = loader.get_template('art/seeing.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
+
+
+def lust(request):
+	template = loader.get_template('art/lust.html')
+	context = {}
+	return HttpResponse(template.render(context, request))
+
+
+
+def design(request):
+	template = loader.get_template('art/design.html')
 	context = {}
 	return HttpResponse(template.render(context, request))
