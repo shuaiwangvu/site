@@ -1,0 +1,36 @@
+{% extends "base-gallery.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<!-- <link rel="stylesheet" href="{% static 'css/gallery.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/button.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/butt.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'assets2/css/main.css' %}"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'assets4/css/gallery.css' %}"> -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'assets4/css/gallery.css' %}"> -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'assets3/css/slick/slick.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/slick/slick-theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/jquery.fancybox.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/magnific-popup.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/plugins.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets3/css/responsive.css' %}"> -->
+
+
+{% endblock extra_css %}
+
+{% block content %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+{% include 'art/design_content.html' %}
+
+{% endblock content %}

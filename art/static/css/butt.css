@@ -14,17 +14,41 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 20px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 div[class*=box] {
-  height: 20%;
+  height: 53%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.box-1 { background-color: #5499C7  ; }
-.box-2 { background-color: #F8C471  ; }
-.box-3 { background-color: #C39BD3 ; }
+.box-1 { }
+/* background-color: #5499C7  ;  */
+.box-2 { }
+/* background-color: #F8C471  ;  */
+.box-3 { }
+/* background-color: #C39BD3 ;  */
 
 .btn {
   line-height: 50px;
@@ -48,6 +72,7 @@ div[class*=box] {
   transition: all 0.3s;
 }
 .btn-one::before {
+
   content: '';
   position: absolute;
   bottom: 0;
