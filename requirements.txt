@@ -7,3 +7,4 @@ setuptools==80.10.2
 sqlparse==0.5.5
 wheel==0.46.3
 whitenoise==6.12.0
+gunicorn
