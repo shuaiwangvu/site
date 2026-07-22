@@ -34,6 +34,46 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
+
+
+<style>
+  .new-badge {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 2px 8px;      /* Less vertical height */
+    border-radius: 8px;    /* Less rounded */
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;       /* Slightly smaller text */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: white;
+
+    background: linear-gradient(135deg, #ff6161, #d40000);
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  }
+
+  .new-badge::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 35%;
+    height: 200%;
+    background: rgba(255,255,255,.5);
+    transform: rotate(25deg);
+    animation: shine 2.5s infinite;
+  }
+
+  @keyframes shine {
+    0%   { left: -75%; }
+    40%,100% { left: 130%; }
+  }
+</style>
+
     <body class="{% block body_class %}{% endblock %}">
 
 		<div class="header">
